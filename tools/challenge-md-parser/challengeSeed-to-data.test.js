@@ -8,21 +8,24 @@ describe('challengeSeed-to-data plugin', () => {
 
   beforeEach(() => {
     file = { data: {} };
-  });
+  } );
 
   it('returns a function', () => {
     expect(typeof plugin).toEqual('function');
-  });
+                                  }
+  );
 
   it('adds a `files` property to `file.data`', () => {
     plugin(mockAST, file);
     expect('files' in file.data).toBe(true);
-  });
+                                                      }
+  );
 
   it('ensures that the `files` property is an array', () => {
     plugin(mockAST, file);
     expect(Array.isArray(file.data.files)).toBe(true);
-  });
+                                                         } 
+   );
 
   it('adds test objects to the files array following a schema', () => {
     expect.assertions(7);
@@ -38,7 +41,8 @@ describe('challengeSeed-to-data plugin', () => {
     expect(testObject).toHaveProperty('contents');
     expect(testObject).toHaveProperty('head');
     expect(testObject).toHaveProperty('tail');
-  });
+               }
+                             );
 
   it('only adds strings to the `files` object type', () => {
     expect.assertions(6);
@@ -55,5 +59,5 @@ describe('challengeSeed-to-data plugin', () => {
   it('should have an output to match the snapshot', () => {
     plugin(mockAST, file);
     expect(file.data).toMatchSnapshot();
-  });
-});
+  }               );
+}                          );
