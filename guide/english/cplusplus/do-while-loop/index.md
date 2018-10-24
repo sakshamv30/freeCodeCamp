@@ -39,3 +39,4 @@ Do something first and then test if we have to continue. The result is that the 
 		return 0;
 	}
 ```
+Example: [Do-While Loop[Programiz.com]-(https://www.programiz.com/c-programming/c-do-while-loops)
